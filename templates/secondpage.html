@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <style>
+  body{
+    margin:0;
+    padding:20px;
+    background-image:url('https://t3.ftcdn.net/jpg/07/23/27/06/240_F_723270652_DugOJYdtwzbsZ6LBFoEhzmWhCjFTVoRd.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    font-family:Arial, sans-serif;
+}
+
+form{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,0.85);
+    padding:20px;
+    border-radius:12px;
+}
+
+h2{
+    text-align:center;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    padding:10px 20px;
+    margin:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    h2{
+        font-size:1.3rem;
+    }
+
+    h3{
+        font-size:1rem;
+    }
+
+    label{
+        display:inline-block;
+        margin-bottom:8px;
+    }
+}</style>
+</head>
+<body>
+    <h2>Provide answers to following questions to get suggestion for quality movies</h2>
+    <form action="/Submit"method="POST">
+        <h3 class="h3">1. Where would you like to visit?</h3>
+        <label for="visitLondon"> (a) Year 1800 London</label>
+        <input type="radio" name="visit" id="visitLondon" value="-1">
+        <br>
+        <label for="visitShanghai"> (b) Year 2100 Shanghai</label>
+        <input type="radio" name="visit" id="visitShanghai" value="1">
+        <h3 class="h3">2. What do you enjoy more?</h3>
+        <label for="testCricket"> (a) Test cricket</label>
+        <input type="radio" name="enjoy" id="testCricket" value="-1">
+        <br>
+        <label for="t20Cricket"> (b) T-20 cricket</label>
+        <input type="radio" name="enjoy" id="t20Cricket" value="1"> 
+        <h3 class="h3">3. What would you like to do?</h3>
+        <label for="shortStory"> (a)Imagine something fantastical  </label>
+        <input type="radio" name="read" id="fantastical" value="-1">
+        <br>
+        <label for="longNovel"> (b)Solve a mystry </label>
+        <input type="radio" name="read" id="mystry" value="1">
+        <h3 class="h3">4. Which of the following will you prefer in holidays?</h3>
+        <label for="stayHome"> (a) Staying home</label>
+        <input type="radio" name="holiday" id="stayHome" value="-1">
+        <br>
+        <label for="himalayaTrip"> (b) Travelling to Himalayas</label>
+        <input type="radio" name="holiday" id="himalayaTrip" value="1">
+        <h3 class="h3">5. What is your mood right now ?</h3>
+        <label for="medievalArmor"> (a) Feeling lighthearted </label>
+        <input type="radio" name="feeling" id="light" value="-1">
+        <br>
+        <label for="ironManMark3"> (b) Feeling serious right now</label>
+        <input type="radio" name="feeling" id="serious" value="1">
+        <h3 class="h3">6. Which type of theme you like in a movie?</h3>
+        <label for="jungleSafari"> (a) Villain is an idea or an entity </label>
+        <input type="radio" name="villain" id="idea" value="1">
+        <br>
+        <label for="amusementPark"> (b) Villain is a man</label>
+        <input type="radio" name="villain" id="man" value="-1">
+        <br><br>
+        <fill id="fill">
+        <input type="Submit" value="Submit">
+        <input type="reset" value="Reset">
+    </fill>
+    </form>
+</body>
+</html>

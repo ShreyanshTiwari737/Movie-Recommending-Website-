@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Recommendation</title>
+    <style>
+    body{
+        background-image: url(https://img.freepik.com/premium-vector/movie-theatre-background-with-white-screen-red-curtains-chairs_184787-172.jpg?w=740);
+        background-repeat: no;
+        background-size: 100%;
+    }
+    h1{
+        margin:5rem 0rem 0rem 23rem;
+        font-size:3rem;
+    }
+    #container ul{
+        margin:2rem 0rem 0rem 30rem;
+    }
+    #container ul li{
+        margin:12px;
+        font-style: bold;
+        font-size:1.3rem;
+        
+    }
+    #container1{
+        display:block;
+        margin-top:9rem;
+        margin-left:53rem;
+    }
+    #button1 a{
+        text-decoration:none;
+        color:black;
+    }
+    #button2 a{
+        text-decoration:none;
+        color:black;
+    }
+    #button1:hover{
+        background-color: rgb(140, 148, 140);
+    }
+    #button2:hover{
+        background-color: rgb(140, 148, 140);
+    }
+    </style>
+</head>
+<body>
+	<h1>WE RECOMMENDED YOU</h1>
+    <container id="container">
+    <ul>
+        {% for movie in movie_data %}
+            <li>{{ movie }}</li> 
+        {% endfor %}
+    </ul>
+<container id="container1">
+    <button id="button1"><a href="{{ url_for('secondpage') }}">Back secondpage</a></button>
+    <button id="button2"><a href="{{ url_for('index') }}">Back Homepage</a></button>
+</container>
+</body>
+</html>

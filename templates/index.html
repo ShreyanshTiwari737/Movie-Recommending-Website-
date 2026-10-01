@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie recommentation system</title>
+    <style>
+   body{
+    margin:0;
+    min-height:100vh;
+    background-image:url('https://img.freepik.com/free-photo/composition-cinema-elements-beige-background-with-copy-space_23-2148416816.jpg?w=900');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.container{
+    max-width:700px;
+    padding:20px;
+}
+
+h1{
+    font-size:clamp(2rem,5vw,4rem);
+    margin-bottom:15px;
+}
+
+p{
+    font-size:1.1rem;
+}
+
+#button{
+    width:220px;
+    font-size:1.2rem;
+    padding:12px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+#button a{
+    text-decoration:none;
+    color:black;
+}</style>
+</head>
+<body>
+    <div class="container">
+    <h1>Welcome</h1>
+    <p>Solve our fun quiz and we will suggest movies for you according to your personality and mood</p>
+
+    <button id="button">
+        <a href="{{ url_for('secondpage') }}">Let's Start</a>
+    </button>
+</div>
+</body>
+</html>
